@@ -270,7 +270,9 @@ body {
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             padding: 30px;
-            clear: both; }
+            clear: both;
+            max-height: 300px;
+            overflow: scroll; }
             .content .familiarfaces .faces .face_information .info p {
               font-size: 0.9em;
               line-height: 1.9em;
