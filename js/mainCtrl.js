@@ -207,12 +207,11 @@ app.controller("mainCtrl", function appCtrl($scope, $rootScope, $http, $location
   }
 
   // familiar faces
-  $scope.clickedRight = function() {
-    if ($scope.slideNum === 6)
-    {
-      $scope.slideNum = 1;
+  $scope.clickedLeft = function() {
+    if ($scope.slideNum === 1) {
+      $scope.slideNum = 6;
     } else {
-      $scope.slideNum += 1;
+      $scope.slideNum -= 1;
     }
     // face 1
     if ($scope.slideNum === 1) {
@@ -269,11 +268,12 @@ app.controller("mainCtrl", function appCtrl($scope, $rootScope, $http, $location
       $('.face1').addClass('none').removeClass('inline-block');
     }
   }
-  $scope.clickedLeft = function() {
-    if ($scope.slideNum === 1) {
-      $scope.slideNum = 6;
+  $scope.clickedRight = function() {
+    if ($scope.slideNum === 6)
+    {
+      $scope.slideNum = 1;
     } else {
-      $scope.slideNum -= 1;
+      $scope.slideNum += 1;
     }
     // face 1
     if ($scope.slideNum === 1) {
