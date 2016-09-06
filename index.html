@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="ticApp">
+  <head>
+    <meta charset="utf-8">
+    <base href="/techincali/">
+    <title>_Tech in Cali</title>
+    <meta name="description" content="Popular tech startup info in California" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Miriam+Libre:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <!-- js -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+    <script type="text/javascript" src="ticApp.js"></script>
+    <!-- <script src="js/loader.js"></script> -->
+    <!-- <script src="js/nav.js"></script> -->
+    <script src="js/weather.js"></script>
+    <script src="js/mainCtrl.js"></script>
+  </head>
+  <body ng-controller="mainCtrl">
+    <!-- <div class="start">
+      <div class="loader">
+        <div class="background-loader">
+          <div class="moving-loader"></div>
+        </div>
+        <p class="p1">&lt; starting up the system &gt;</p>
+        <p class="p2">&lt; compiling code &gt;</p>
+        <p class="p3">&lt; researching about california &gt;</p>
+        <p class="p4">&lt; all done ... enjoy &gt;</p>
+        <div class="hider"></div>
+      </div>
+    </div> -->
+    <div class="main">
+      <div class="sidebar">
+        <div class="title">
+          <h1><span class="pulse blue-font">_</span><span class="yellow-font">tech</span> <span class="blue-font small">in</span> <span class="yellow-font">cali</span></h1>
+        </div>
+
+        <div ui-sref="weather" ng-click="getWeather(); navWeather()"  class="yellow-bg navBlock" id="weather">
+          <div class="bar" id="active-bar1"></div>
+          <h2 class="blue-font"><span class="pulse">_</span>weather</h2>
+        </div>
+        <div ui-sref="startups" ng-click="navStartups()" class="blue-bg navBlock" id="thestartups">
+          <div class="bar hidden" id="active-bar2"></div>
+          <h2 class="yellow-font"><span class="pulse">_</span>the.startups</h2>
+        </div>
+        <div ui-sref="familiarfaces" ng-click="navFaces()" class="yellow-bg navBlock" id="familiarfaces">
+          <div class="bar hidden" id="active-bar3"></div>
+          <h2 class="blue-font"><span class="pulse">_</span>familiar.faces</h2>
+        </div>
+        <div ui-sref="funfacts" ng-click="navFacts()" class="blue-bg navBlock" id="funfacts">
+          <div class="bar hidden" id="active-bar4"></div>
+          <h2 class="yellow-font"><span class="pulse">_</span>fun.facts</h2>
+        </div>
+      </div>
+      <div class="content">
+        <div ui-view></div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
