@@ -331,4 +331,21 @@ app.controller("mainCtrl", function appCtrl($scope, $rootScope, $http, $location
     }
   }
 
+  // fun facts
+  $scope.showFactInfo = function() {
+    document.getElementById('fact').innerHTML = "hover over a fact to see them!";
+  }
+  $scope.showFact1 = function() {
+    document.getElementById('fact').innerHTML = "Silicon Valley became famous as the birthplace of the silicon-based transistor in the 1950s. A man named Don Hoefler later entered the nickname into the public consciousness through a series of articles he wrote for the 'Electronic News' in 1971.";
+  }
+  $scope.showFact2 = function() {
+    document.getElementById('fact').innerHTML = "Bill Gates house was designed using a Macintosh Computer.";
+  }
+  $scope.showFact3 = function() {
+    document.getElementById('fact').innerHTML = "The Apple Lisa was the first commercial computer with a graphical user interface (GUI) and a mouse. The Apple Lisa was released in June 1983.";
+  }
+  $scope.showFact4 = function() {
+    document.getElementById('fact').innerHTML = "Facebook has a blue colour scheme because the creator, Mark Zuckerberg cannot see the colours red & green.";
+  }
+
 })
