@@ -16,5 +16,8 @@ $(document).ready(function() {
 	setTimeout(function(){
 		$('body').addClass('loaded');
 	}, 17000);
+	setTimeout(function(){
+		$('.start').addClass('none');
+	}, 17300);
 
 });

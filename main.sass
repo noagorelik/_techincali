@@ -120,9 +120,7 @@ body
   animation: comeLeft linear 0.5s
 
 .loaded .start
-  opacity: 0
-  -webkit-transition: all 0.3s ease-out
-  transition: all 0.3s ease-out
+  animation: loaded linear 0.3s
 
 .main
   width: 100vw
@@ -130,248 +128,256 @@ body
 
 // large screen
 @media screen and (min-width: $break-screen)
-  .sidebar
-    width: 30%
-    height: 100vh
-    background-color: $gray
-    display: inline-block
-    float: left
-
-    .bar
-      height: 18.75%
-      width: 10px
-      background-color: $green
-      position: absolute
-      left: 30%
-      margin-left: -10px
-      box-shadow: -5px 0 6px -3.5px rgba(31, 73, 125, 0.8)
-
-    .title
-      height: 25%
-      width: 100%
-      display: table
-      padding-left: 30px
-      .small
-        font-size: 0.8em
-
-    .navBlock
-      height: 18.8%
-      width: 100%
-      padding-left: 30px
-      box-sizing: border-box
-      display: table
-      cursor: pointer
-    .navBlock:hover
-      h2
-        font-size: 1.5em
-
-  .content
-    display: inline-block
-    height: 100vh
-    float: right
-    width: 70%
-    overflow-y: scroll
-
-    //weather
-    .weather
+  .main
+    .sidebar
+      width: 30%
+      height: 100vh
       background-color: $gray
-      .la, .sf, .sv
-        background-size: cover
-      .la
-        background-image: url('images/la.jpg')
-      .sf
-        background-image: url('images/sf.jpg')
-      .sv
-        background-image: url('images/sv.jpg')
-      .weather-block
-        height: 230px
+      display: inline-block
+      float: left
+
+      .bar
+        height: 18.75%
+        width: 10px
+        background-color: $green
+        position: absolute
+        left: 30%
+        margin-left: -10px
+        box-shadow: -5px 0 6px -3.5px rgba(31, 73, 125, 0.8)
+
+      .title
+        height: 25%
         width: 100%
-        padding: 30px 50px
+        display: table
+        padding-left: 30px
+        .small
+          font-size: 0.8em
+
+      .navBlock
+        height: 18.8%
+        width: 100%
+        padding-left: 30px
         box-sizing: border-box
         display: table
-        h3
-          width: 60%
-          font-size: 2.6em
-        .circle
-          display: table-cell
-          vertical-align: middle
-          p
-            border: 6px solid $blue
-            padding: 40px 26px
-            border-radius: 50%
-            text-align: center
+        cursor: pointer
+      .navBlock:hover
+        h2
+          font-size: 1.5em
+
+    .content
+      display: inline-block
+      height: 100vh
+      float: right
+      width: 70%
+      overflow-y: scroll
+
+      //weather
+      .weather
+        background-color: $gray
+        .la, .sf, .sv
+          background-size: cover
+        .la
+          background-image: url('images/la.jpg')
+        .sf
+          background-image: url('images/sf.jpg')
+        .sv
+          background-image: url('images/sv.jpg')
+        .weather-block
+          height: 230px
+          width: 100%
+          padding: 30px 50px
+          box-sizing: border-box
+          display: table
+          h3
+            width: 60%
+            font-size: 2.6em
+          .circle
             display: table-cell
             vertical-align: middle
-            font-size: 2.5em
-            font-weight: 700
-
-    // start ups
-    .startups
-      text-align: center
-      .slide
-        width: 60%
-        margin: 0 auto
-        .slide1, .slide2, .slide3, .slide4, .slide5, .slide6
-          width: 100%
-        .logo
-          height: 50px
-          margin: 70px auto 50px auto
-        .information
-          color: $blue
-          text-align: center
-          line-height: 2.5em
-          font-size: 1em
-          .source
-            display: block
-            margin-top: 25px
-
-
-      .slideButtons
-        text-align: center
-        margin: 40px 0
-        display: block
-        position: absolute
-        left: 32%
-        top: 50%
-        margin-top: -130px
-        .btn
-          height: 20px
-          width: 20px
-          background-color: $yellow
-          display: block
-          border-radius: 50%
-          margin: 20px 0px
-          opacity: 0.6
-          -webkit-transition: all 0.3s ease-out
-          transition: all 0.3s ease-out
-          cursor: pointer
-        .btn:hover
-          opacity: 1
-        .active
-          opacity: 1
-          text-shadow: 0px 0px 20px rgba(190, 184, 34, 0)
-          animation: growShrink linear 2s infinite
-
-    // familiar faces
-    .familiarfaces
-      width: 100%
-      .faces
-        display: inline-block
-        padding: 50px 30px 0 30px
-        width: 80%
-        .headshot
-          width: 150px
-          display: block
-          margin: 0 auto
-          .face
-            width: 100%
-            border-radius: 50%
-        .face_information
-          margin: 30px auto 0 auto
-          text-align: center
-          width: 80%
-          h3
-            font-weight: 700
-            font-size: 1.4em
-            display: block
-            margin: 0
-          .top
-            overflow: hidden
-            border-top-left-radius: 5px
-            border-top-right-radius: 5px
-            .age
-              border-top-left-radius: 5px
-              width: 40%
-              padding: 20px
-              float: left
-              margin-top: 20px
-            .networth
-              border-top-right-radius: 5px
-              width: 60%
-              float: right
-              padding: 20px
-          .info
-            border-bottom-left-radius: 5px
-            border-bottom-right-radius: 5px
-            padding: 30px
-            clear: both
-            max-height: 300px
-            overflow: scroll
             p
-              font-size: 0.9em
-              line-height: 1.9em
-              font-weight: 500
+              border: 6px solid $blue
+              padding: 40px 26px
+              border-radius: 50%
+              text-align: center
+              display: table-cell
+              vertical-align: middle
+              font-size: 2.5em
+              font-weight: 700
+
+      // start ups
+      .startups
+        text-align: center
+        .slide
+          width: 60%
+          margin: 0 auto
+          .slide1, .slide2, .slide3, .slide4, .slide5, .slide6
+            width: 100%
+          .logo
+            height: 50px
+            margin: 70px auto 50px auto
+          .information
+            color: $blue
+            text-align: center
+            line-height: 2.5em
+            font-size: 1em
+            .source
+              display: block
+              margin-top: 25px
 
 
-      .arrow-left, .arrow-right
-        display: block
+        .slideButtons
+          text-align: center
+          margin: 40px 0
+          display: block
+          position: absolute
+          left: 32%
+          top: 50%
+          margin-top: -130px
+          .btn
+            height: 20px
+            width: 20px
+            background-color: $yellow
+            display: block
+            border-radius: 50%
+            margin: 20px 0px
+            opacity: 0.6
+            -webkit-transition: all 0.3s ease-out
+            transition: all 0.3s ease-out
+            cursor: pointer
+          .btn:hover
+            opacity: 1
+          .active
+            opacity: 1
+            text-shadow: 0px 0px 20px rgba(190, 184, 34, 0)
+            animation: growShrink linear 2s infinite
+
+      // familiar faces
+      .familiarfaces
+        width: 100%
+        .faces
+          display: inline-block
+          padding: 50px 30px 0 30px
+          width: 80%
+          .headshot
+            width: 150px
+            display: block
+            margin: 0 auto
+            .face
+              width: 100%
+              border-radius: 50%
+          .face_information
+            margin: 30px auto 0 auto
+            text-align: center
+            width: 80%
+            h3
+              font-weight: 700
+              font-size: 1.4em
+              display: block
+              margin: 0
+            .top
+              overflow: hidden
+              border-top-left-radius: 5px
+              border-top-right-radius: 5px
+              .age
+                border-top-left-radius: 5px
+                width: 40%
+                padding: 20px
+                float: left
+                margin-top: 20px
+              .networth
+                border-top-right-radius: 5px
+                width: 60%
+                float: right
+                padding: 20px
+            .info
+              border-bottom-left-radius: 5px
+              border-bottom-right-radius: 5px
+              padding: 30px
+              clear: both
+              max-height: 300px
+              overflow: scroll
+              p
+                font-size: 0.9em
+                line-height: 1.9em
+                font-weight: 500
+
+
+        .arrow-left, .arrow-right
+          display: block
+          height: 100vh
+          width: 10%
+          display: table
+          padding: 0 20px
+          .fa
+            font-size: 3em
+            display: table-cell
+            vertical-align: middle
+            cursor: pointer
+            -webkit-transition: all 0.3s ease-out
+            transition: all 0.3s ease-out
+          .fa:hover
+            font-size: 4em
+        .arrow-left
+          float: left
+        .arrow-right
+          float: right
+
+      // fun facts
+      .funfacts
         height: 100vh
-        width: 10%
+        width: 100%
         display: table
-        padding: 0 20px
-        .fa
-          font-size: 3em
+        h4
+          position: absolute
+          text-align: center
+        .f_num
+          display: block
+          font-size: 2em
+        .factBtn:hover
+          cursor: pointer
+          img
+            animation: rotate linear 5s infinite
+        .factBtn
+          position: absolute
+          img
+            height: 200px
+        .fact1
+          left: 30%
+          top: 0
+          h4
+            top: 25%
+            left: 35%
+        .fact2
+          right: 0
+          top: 0
+          h4
+            top: 25%
+            right: 33%
+        .fact3
+          left: 30%
+          bottom: 0
+          h4
+            bottom: 25%
+            left: 35%
+        .fact4
+          right: 0
+          bottom: 0
+          h4
+            bottom: 25%
+            right: 33%
+        p
+          font-size: 1.5em
           display: table-cell
           vertical-align: middle
-          cursor: pointer
-          -webkit-transition: all 0.3s ease-out
-          transition: all 0.3s ease-out
-        .fa:hover
-          font-size: 4em
-      .arrow-left
-        float: left
-      .arrow-right
-        float: right
+          text-align: center
+          padding: 100px
 
-    // fun facts
-    .funfacts
-      height: 100vh
-      width: 100%
-      display: table
-      h4
-        position: absolute
-        text-align: center
-      .f_num
-        display: block
-        font-size: 2em
-      .factBtn:hover
-        cursor: pointer
-        img
-          animation: rotate linear 5s infinite
-      .factBtn
-        position: absolute
-        img
-          height: 200px
-      .fact1
-        left: 30%
-        top: 0
-        h4
-          top: 25%
-          left: 35%
-      .fact2
-        right: 0
-        top: 0
-        h4
-          top: 25%
-          right: 33%
-      .fact3
-        left: 30%
-        bottom: 0
-        h4
-          bottom: 25%
-          left: 35%
-      .fact4
-        right: 0
-        bottom: 0
-        h4
-          bottom: 25%
-          right: 33%
-      p
-        font-size: 1.5em
-        display: table-cell
-        vertical-align: middle
-        text-align: center
-        padding: 100px
+@keyframes loaded
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    display: none
 
 @keyframes progress
   0%, 30%

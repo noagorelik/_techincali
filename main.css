@@ -109,22 +109,20 @@ body {
   animation: comeLeft linear 0.5s; }
 
 .loaded .start {
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+  animation: loaded linear 0.3s; }
 
 .main {
   width: 100vw;
   height: 100vh; }
 
 @media screen and (min-width: 768px) {
-  .sidebar {
+  .main .sidebar {
     width: 30%;
     height: 100vh;
     background-color: #393939;
     display: inline-block;
     float: left; }
-    .sidebar .bar {
+    .main .sidebar .bar {
       height: 18.75%;
       width: 10px;
       background-color: #00a651;
@@ -132,52 +130,51 @@ body {
       left: 30%;
       margin-left: -10px;
       box-shadow: -5px 0 6px -3.5px rgba(31, 73, 125, 0.8); }
-    .sidebar .title {
+    .main .sidebar .title {
       height: 25%;
       width: 100%;
       display: table;
       padding-left: 30px; }
-      .sidebar .title .small {
+      .main .sidebar .title .small {
         font-size: 0.8em; }
-    .sidebar .navBlock {
+    .main .sidebar .navBlock {
       height: 18.8%;
       width: 100%;
       padding-left: 30px;
       box-sizing: border-box;
       display: table;
       cursor: pointer; }
-    .sidebar .navBlock:hover h2 {
+    .main .sidebar .navBlock:hover h2 {
       font-size: 1.5em; }
-
-  .content {
+  .main .content {
     display: inline-block;
     height: 100vh;
     float: right;
     width: 70%;
     overflow-y: scroll; }
-    .content .weather {
+    .main .content .weather {
       background-color: #393939; }
-      .content .weather .la, .content .weather .sf, .content .weather .sv {
+      .main .content .weather .la, .main .content .weather .sf, .main .content .weather .sv {
         background-size: cover; }
-      .content .weather .la {
+      .main .content .weather .la {
         background-image: url("images/la.jpg"); }
-      .content .weather .sf {
+      .main .content .weather .sf {
         background-image: url("images/sf.jpg"); }
-      .content .weather .sv {
+      .main .content .weather .sv {
         background-image: url("images/sv.jpg"); }
-      .content .weather .weather-block {
+      .main .content .weather .weather-block {
         height: 230px;
         width: 100%;
         padding: 30px 50px;
         box-sizing: border-box;
         display: table; }
-        .content .weather .weather-block h3 {
+        .main .content .weather .weather-block h3 {
           width: 60%;
           font-size: 2.6em; }
-        .content .weather .weather-block .circle {
+        .main .content .weather .weather-block .circle {
           display: table-cell;
           vertical-align: middle; }
-          .content .weather .weather-block .circle p {
+          .main .content .weather .weather-block .circle p {
             border: 6px solid #1d7dba;
             padding: 40px 26px;
             border-radius: 50%;
@@ -186,25 +183,25 @@ body {
             vertical-align: middle;
             font-size: 2.5em;
             font-weight: 700; }
-    .content .startups {
+    .main .content .startups {
       text-align: center; }
-      .content .startups .slide {
+      .main .content .startups .slide {
         width: 60%;
         margin: 0 auto; }
-        .content .startups .slide .slide1, .content .startups .slide .slide2, .content .startups .slide .slide3, .content .startups .slide .slide4, .content .startups .slide .slide5, .content .startups .slide .slide6 {
+        .main .content .startups .slide .slide1, .main .content .startups .slide .slide2, .main .content .startups .slide .slide3, .main .content .startups .slide .slide4, .main .content .startups .slide .slide5, .main .content .startups .slide .slide6 {
           width: 100%; }
-        .content .startups .slide .logo {
+        .main .content .startups .slide .logo {
           height: 50px;
           margin: 70px auto 50px auto; }
-        .content .startups .slide .information {
+        .main .content .startups .slide .information {
           color: #1d7dba;
           text-align: center;
           line-height: 2.5em;
           font-size: 1em; }
-          .content .startups .slide .information .source {
+          .main .content .startups .slide .information .source {
             display: block;
             margin-top: 25px; }
-      .content .startups .slideButtons {
+      .main .content .startups .slideButtons {
         text-align: center;
         margin: 40px 0;
         display: block;
@@ -212,7 +209,7 @@ body {
         left: 32%;
         top: 50%;
         margin-top: -130px; }
-        .content .startups .slideButtons .btn {
+        .main .content .startups .slideButtons .btn {
           height: 20px;
           width: 20px;
           background-color: #beb822;
@@ -223,127 +220,133 @@ body {
           -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
           cursor: pointer; }
-        .content .startups .slideButtons .btn:hover {
+        .main .content .startups .slideButtons .btn:hover {
           opacity: 1; }
-        .content .startups .slideButtons .active {
+        .main .content .startups .slideButtons .active {
           opacity: 1;
           text-shadow: 0px 0px 20px rgba(190, 184, 34, 0);
           animation: growShrink linear 2s infinite; }
-    .content .familiarfaces {
+    .main .content .familiarfaces {
       width: 100%; }
-      .content .familiarfaces .faces {
+      .main .content .familiarfaces .faces {
         display: inline-block;
         padding: 50px 30px 0 30px;
         width: 80%; }
-        .content .familiarfaces .faces .headshot {
+        .main .content .familiarfaces .faces .headshot {
           width: 150px;
           display: block;
           margin: 0 auto; }
-          .content .familiarfaces .faces .headshot .face {
+          .main .content .familiarfaces .faces .headshot .face {
             width: 100%;
             border-radius: 50%; }
-        .content .familiarfaces .faces .face_information {
+        .main .content .familiarfaces .faces .face_information {
           margin: 30px auto 0 auto;
           text-align: center;
           width: 80%; }
-          .content .familiarfaces .faces .face_information h3 {
+          .main .content .familiarfaces .faces .face_information h3 {
             font-weight: 700;
             font-size: 1.4em;
             display: block;
             margin: 0; }
-          .content .familiarfaces .faces .face_information .top {
+          .main .content .familiarfaces .faces .face_information .top {
             overflow: hidden;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px; }
-            .content .familiarfaces .faces .face_information .top .age {
+            .main .content .familiarfaces .faces .face_information .top .age {
               border-top-left-radius: 5px;
               width: 40%;
               padding: 20px;
               float: left;
               margin-top: 20px; }
-            .content .familiarfaces .faces .face_information .top .networth {
+            .main .content .familiarfaces .faces .face_information .top .networth {
               border-top-right-radius: 5px;
               width: 60%;
               float: right;
               padding: 20px; }
-          .content .familiarfaces .faces .face_information .info {
+          .main .content .familiarfaces .faces .face_information .info {
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             padding: 30px;
             clear: both;
             max-height: 300px;
             overflow: scroll; }
-            .content .familiarfaces .faces .face_information .info p {
+            .main .content .familiarfaces .faces .face_information .info p {
               font-size: 0.9em;
               line-height: 1.9em;
               font-weight: 500; }
-      .content .familiarfaces .arrow-left, .content .familiarfaces .arrow-right {
+      .main .content .familiarfaces .arrow-left, .main .content .familiarfaces .arrow-right {
         display: block;
         height: 100vh;
         width: 10%;
         display: table;
         padding: 0 20px; }
-        .content .familiarfaces .arrow-left .fa, .content .familiarfaces .arrow-right .fa {
+        .main .content .familiarfaces .arrow-left .fa, .main .content .familiarfaces .arrow-right .fa {
           font-size: 3em;
           display: table-cell;
           vertical-align: middle;
           cursor: pointer;
           -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out; }
-        .content .familiarfaces .arrow-left .fa:hover, .content .familiarfaces .arrow-right .fa:hover {
+        .main .content .familiarfaces .arrow-left .fa:hover, .main .content .familiarfaces .arrow-right .fa:hover {
           font-size: 4em; }
-      .content .familiarfaces .arrow-left {
+      .main .content .familiarfaces .arrow-left {
         float: left; }
-      .content .familiarfaces .arrow-right {
+      .main .content .familiarfaces .arrow-right {
         float: right; }
-    .content .funfacts {
+    .main .content .funfacts {
       height: 100vh;
       width: 100%;
       display: table; }
-      .content .funfacts h4 {
+      .main .content .funfacts h4 {
         position: absolute;
         text-align: center; }
-      .content .funfacts .f_num {
+      .main .content .funfacts .f_num {
         display: block;
         font-size: 2em; }
-      .content .funfacts .factBtn:hover {
+      .main .content .funfacts .factBtn:hover {
         cursor: pointer; }
-        .content .funfacts .factBtn:hover img {
+        .main .content .funfacts .factBtn:hover img {
           animation: rotate linear 5s infinite; }
-      .content .funfacts .factBtn {
+      .main .content .funfacts .factBtn {
         position: absolute; }
-        .content .funfacts .factBtn img {
+        .main .content .funfacts .factBtn img {
           height: 200px; }
-      .content .funfacts .fact1 {
+      .main .content .funfacts .fact1 {
         left: 30%;
         top: 0; }
-        .content .funfacts .fact1 h4 {
+        .main .content .funfacts .fact1 h4 {
           top: 25%;
           left: 35%; }
-      .content .funfacts .fact2 {
+      .main .content .funfacts .fact2 {
         right: 0;
         top: 0; }
-        .content .funfacts .fact2 h4 {
+        .main .content .funfacts .fact2 h4 {
           top: 25%;
           right: 33%; }
-      .content .funfacts .fact3 {
+      .main .content .funfacts .fact3 {
         left: 30%;
         bottom: 0; }
-        .content .funfacts .fact3 h4 {
+        .main .content .funfacts .fact3 h4 {
           bottom: 25%;
           left: 35%; }
-      .content .funfacts .fact4 {
+      .main .content .funfacts .fact4 {
         right: 0;
         bottom: 0; }
-        .content .funfacts .fact4 h4 {
+        .main .content .funfacts .fact4 h4 {
           bottom: 25%;
           right: 33%; }
-      .content .funfacts p {
+      .main .content .funfacts p {
         font-size: 1.5em;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         padding: 100px; } }
+@keyframes loaded {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    display: none; } }
 @keyframes progress {
   0%, 30% {
     width: 0%; }
