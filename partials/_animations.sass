@@ -1,0 +1,80 @@
+@keyframes loaded
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    display: none
+
+@keyframes progress
+  0%, 30%
+    width: 0%
+  30%
+    width: 40%
+  60%
+    width: 50%
+  70%, 90%
+    width: 80%
+  90%, 100%
+    width: 100%
+
+@keyframes hider
+  0%
+    margin-left: -18.5em
+  33%
+    margin-left: 8em
+  66%
+    margin-left: 8em
+  100%
+    margin-left: -18.5em
+
+@keyframes pulse
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes growShrink
+  0%, 60%
+    box-shadow: 0px 0px 0px 0px rgba(190, 184, 34, .5)
+  100%
+    box-shadow: 0px 0px 0px 20px rgba(190, 184, 34, 0)
+
+@keyframes leave
+  0%
+    transform: translateX(0px)
+    opacity: 1
+  100%
+    transform: translateX(-500px)
+    opacity: 0
+
+@keyframes comeUp
+  0%
+    transform: translateY(-500px)
+    opacity: 0
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+@keyframes comeRight
+  0%
+    transform: translateX(500px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1
+
+@keyframes comeLeft
+  0%
+    transform: translateX(-500px)
+    opacity: 0
+  100%
+    transform: translateX(0px)
+    opacity: 1
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

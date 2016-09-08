@@ -1,6 +1,25 @@
 app.controller("mainCtrl", function appCtrl($scope, $rootScope, $http, $location, $state, $window) {
 
   $scope.slideNum = 1;
+  $scope.navPress = 0;
+
+  // Mobile Nav
+  $scope.pressedMNav = function() {
+    $scope.navPress += 1;
+    // contract
+    if ($scope.navPress % 2 === 0) {
+      $('.navList').addClass('contract').removeClass('expand');
+    }
+    // expand
+    else {
+      $('.navList').addClass('expand').removeClass('contract');
+    }
+  }
+
+  $scope.navContract = function() {
+    // contract
+    $('.navList').addClass('contract').removeClass('expand');
+  }
 
   // Weather
   $scope.getWeather = function() {

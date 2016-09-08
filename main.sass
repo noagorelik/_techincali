@@ -1,5 +1,6 @@
 $cream: #ededed
 $gray: #393939
+$lighter-gray: #3f3f3f
 $blue: #1d7dba
 $yellow: #beb822
 $green: #00a651
@@ -128,6 +129,8 @@ body
 
 // large screen
 @media screen and (min-width: $break-screen)
+  .mobileNav
+    display: none
   .main
     .sidebar
       width: 30%
@@ -372,87 +375,59 @@ body
           text-align: center
           padding: 100px
 
-@keyframes loaded
-  0%
-    opacity: 1
-  100%
-    opacity: 0
-    display: none
-
-@keyframes progress
-  0%, 30%
-    width: 0%
-  30%
-    width: 40%
-  60%
-    width: 50%
-  70%, 90%
-    width: 80%
-  90%, 100%
-    width: 100%
-
-@keyframes hider
-  0%
-    margin-left: -18.5em
-  33%
-    margin-left: 8em
-  66%
-    margin-left: 8em
-  100%
-    margin-left: -18.5em
-
-@keyframes pulse
-  0%
-    opacity: 1
-  50%
-    opacity: 0
-  100%
-    opacity: 1
-
-@keyframes growShrink
-  0%, 60%
-    box-shadow: 0px 0px 0px 0px rgba(190, 184, 34, .5)
-  100%
-    box-shadow: 0px 0px 0px 20px rgba(190, 184, 34, 0)
-
-@keyframes leave
-  0%
-    transform: translateX(0px)
-    opacity: 1
-  100%
-    transform: translateX(-500px)
-    opacity: 0
-
-@keyframes comeUp
-  0%
-    transform: translateY(-500px)
-    opacity: 0
-  100%
-    transform: translateY(0px)
-    opacity: 1
-
-@keyframes comeRight
-  0%
-    transform: translateX(500px)
-    opacity: 0
-  100%
-    transform: translateX(0px)
-    opacity: 1
-
-@keyframes comeLeft
-  0%
-    transform: translateX(-500px)
-    opacity: 0
-  100%
-    transform: translateX(0px)
-    opacity: 1
-
-@keyframes rotate
-  0%
-    transform: rotate(0deg)
-  100%
-    transform: rotate(360deg)
-
-
-// small screen
+// small screen (mobile)
 @media screen and (max-width: $break-screen)
+  .sidebar
+    display: none
+  .mobileNav
+    display: block
+  .navBar
+    display: block
+    background-color: $gray
+    height: 50px
+    width: 100%
+    .logo
+      display: inline-block
+      float: left
+      margin: 10px 30px
+      h1
+        display: inline-block
+        font-size: 1.4em
+      .small
+        font-size: 0.8em
+    .nav
+      display: inline-block
+      float: right
+      height: 30px
+      display: table
+      margin: 10px 30px
+      i
+        color: $blue
+        display: table-cell
+        vertical-align: middle
+        font-size: 1.4em
+        transition: all 0.3s ease-out
+    .nav:hover
+      i
+        color: $yellow
+  .navList
+    height: 0px
+    background-color: $lighter-gray
+    width: 100%
+    margin: 0
+    list-style-type: none
+    padding-left: 30px
+    transition: all 0.3s ease-out
+    overflow: hidden
+    li
+      h2
+        font-size: 1em
+        padding: 10px 0
+  .expand
+    height: 168px
+  .contract
+    height: 0px
+
+
+
+@import "partials/animations"

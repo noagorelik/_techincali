@@ -116,6 +116,9 @@ body {
   height: 100vh; }
 
 @media screen and (min-width: 768px) {
+  .mobileNav {
+    display: none; }
+
   .main .sidebar {
     width: 30%;
     height: 100vh;
@@ -341,6 +344,60 @@ body {
         vertical-align: middle;
         text-align: center;
         padding: 100px; } }
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none; }
+
+  .mobileNav {
+    display: block; }
+
+  .navBar {
+    display: block;
+    background-color: #393939;
+    height: 50px;
+    width: 100%; }
+    .navBar .logo {
+      display: inline-block;
+      float: left;
+      margin: 10px 30px; }
+      .navBar .logo h1 {
+        display: inline-block;
+        font-size: 1.4em; }
+      .navBar .logo .small {
+        font-size: 0.8em; }
+    .navBar .nav {
+      display: inline-block;
+      float: right;
+      height: 30px;
+      display: table;
+      margin: 10px 30px; }
+      .navBar .nav i {
+        color: #1d7dba;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 1.4em;
+        transition: all 0.3s ease-out; }
+    .navBar .nav:hover i {
+      color: #beb822; }
+
+  .navList {
+    height: 0px;
+    background-color: #3f3f3f;
+    width: 100%;
+    margin: 0;
+    list-style-type: none;
+    padding-left: 30px;
+    transition: all 0.3s ease-out;
+    overflow: hidden; }
+    .navList li h2 {
+      font-size: 1em;
+      padding: 10px 0; }
+
+  .expand {
+    height: 168px; }
+
+  .contract {
+    height: 0px; } }
 @keyframes loaded {
   0% {
     opacity: 1; }
