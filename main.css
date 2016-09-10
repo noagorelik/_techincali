@@ -439,6 +439,46 @@ body {
             vertical-align: middle;
             font-size: 1.5em;
             font-weight: 700; }
+    .content .startups .slide {
+      margin-left: 10%;
+      padding: 30px;
+      text-align: center; }
+      .content .startups .slide .logo {
+        height: 50px;
+        margin-bottom: 20px; }
+      .content .startups .slide .information {
+        font-size: 0.8em;
+        padding: 0 10px;
+        line-height: 2em;
+        color: #1d7dba; }
+      .content .startups .slide .source {
+        display: block;
+        margin-top: 10px; }
+    .content .startups .slideButtons {
+      text-align: center;
+      margin: 40px 0;
+      display: block;
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      margin-top: -130px; }
+      .content .startups .slideButtons .btn {
+        height: 20px;
+        width: 20px;
+        background-color: #beb822;
+        display: block;
+        border-radius: 50%;
+        margin: 20px 0px;
+        opacity: 0.6;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        cursor: pointer; }
+      .content .startups .slideButtons .btn:hover {
+        opacity: 1; }
+      .content .startups .slideButtons .active {
+        opacity: 1;
+        text-shadow: 0px 0px 20px rgba(190, 184, 34, 0);
+        animation: growShrink linear 2s infinite; }
     .content .familiarfaces {
       width: 100vw;
       display: block;
