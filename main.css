@@ -544,7 +544,57 @@ body {
       .content .familiarfaces .arrow-left {
         float: left; }
       .content .familiarfaces .arrow-right {
-        float: right; } }
+        float: right; }
+    .content .funfacts {
+      height: 100vh;
+      width: 100%;
+      display: table; }
+      .content .funfacts h4 {
+        position: absolute;
+        text-align: center;
+        font-size: 0.9em; }
+      .content .funfacts .f_num {
+        display: block;
+        font-size: 1.2em; }
+      .content .funfacts .factBtn:hover {
+        cursor: pointer; }
+        .content .funfacts .factBtn:hover img {
+          animation: rotate linear 5s infinite; }
+      .content .funfacts .factBtn {
+        position: absolute; }
+        .content .funfacts .factBtn img {
+          height: 120px; }
+      .content .funfacts .fact1 {
+        left: 0%;
+        top: 60px; }
+        .content .funfacts .fact1 h4 {
+          top: 20%;
+          left: 25%; }
+      .content .funfacts .fact2 {
+        right: 0;
+        top: 60px; }
+        .content .funfacts .fact2 h4 {
+          top: 20%;
+          right: 25%; }
+      .content .funfacts .fact3 {
+        left: 0%;
+        bottom: 0; }
+        .content .funfacts .fact3 h4 {
+          bottom: 20%;
+          left: 25%; }
+      .content .funfacts .fact4 {
+        right: 0;
+        bottom: 0; }
+        .content .funfacts .fact4 h4 {
+          bottom: 20%;
+          right: 25%; }
+      .content .funfacts p {
+        font-size: 1.2em;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height: 50%;
+        padding: 0 30px; } }
 @keyframes loaded {
   0% {
     opacity: 1; }
