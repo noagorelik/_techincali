@@ -482,7 +482,69 @@ body {
     .content .familiarfaces {
       width: 100vw;
       display: block;
-      overflow: hidden; } }
+      overflow: hidden; }
+      .content .familiarfaces .faces {
+        display: inline-block;
+        padding-top: 50px;
+        width: calc(100vw - 65px); }
+        .content .familiarfaces .faces .headshot {
+          width: 150px;
+          display: block;
+          margin: 0 auto; }
+          .content .familiarfaces .faces .headshot .face {
+            width: 100%;
+            border-radius: 50%; }
+        .content .familiarfaces .faces .face_information {
+          margin: 30px auto 0 auto;
+          text-align: center;
+          width: 80%; }
+          .content .familiarfaces .faces .face_information h3 {
+            font-weight: 700;
+            font-size: 1em;
+            display: block;
+            margin: 0; }
+          .content .familiarfaces .faces .face_information .top {
+            overflow: hidden;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px; }
+            .content .familiarfaces .faces .face_information .top .age {
+              border-top-left-radius: 5px;
+              width: 40%;
+              padding: 20px;
+              float: left;
+              margin-top: 20px; }
+            .content .familiarfaces .faces .face_information .top .networth {
+              border-top-right-radius: 5px;
+              width: 60%;
+              float: right;
+              padding: 20px; }
+          .content .familiarfaces .faces .face_information .info {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 30px;
+            clear: both;
+            max-height: 300px;
+            overflow: scroll; }
+            .content .familiarfaces .faces .face_information .info p {
+              font-size: 0.9em;
+              line-height: 1.9em;
+              font-weight: 500; }
+      .content .familiarfaces .arrow-left, .content .familiarfaces .arrow-right {
+        height: 100vh;
+        width: 2%;
+        display: table;
+        padding: 0 10px; }
+        .content .familiarfaces .arrow-left .fa, .content .familiarfaces .arrow-right .fa {
+          font-size: 2em;
+          display: table-cell;
+          vertical-align: middle;
+          cursor: pointer;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out; }
+      .content .familiarfaces .arrow-left {
+        float: left; }
+      .content .familiarfaces .arrow-right {
+        float: right; } }
 @keyframes loaded {
   0% {
     opacity: 1; }
