@@ -125,13 +125,22 @@ body
 
 .main
   width: 100vw
-  height: 100vh
+
+.la, .sf, .sv
+  background-size: cover
+.la
+  background-image: url('images/la.jpg')
+.sf
+  background-image: url('images/sf.jpg')
+.sv
+  background-image: url('images/sv.jpg')
 
 // large screen
 @media screen and (min-width: $break-screen)
   .mobileNav
     display: none
   .main
+    height: 100vh
     .sidebar
       width: 30%
       height: 100vh
@@ -177,14 +186,7 @@ body
       //weather
       .weather
         background-color: $gray
-        .la, .sf, .sv
-          background-size: cover
-        .la
-          background-image: url('images/la.jpg')
-        .sf
-          background-image: url('images/sf.jpg')
-        .sv
-          background-image: url('images/sv.jpg')
+
         .weather-block
           height: 230px
           width: 100%
@@ -381,6 +383,11 @@ body
     display: none
   .mobileNav
     display: block
+    background-color: $gray
+    height: 50px
+    width: 100vw
+    position: absolute
+    top: 0
   .navBar
     display: block
     background-color: $gray
@@ -401,6 +408,7 @@ body
       height: 30px
       display: table
       margin: 10px 30px
+      cursor: pointer
       i
         color: $blue
         display: table-cell
@@ -420,6 +428,7 @@ body
     transition: all 0.3s ease-out
     overflow: hidden
     li
+      cursor: pointer
       h2
         font-size: 1em
         padding: 10px 0
@@ -427,6 +436,41 @@ body
     height: 168px
   .contract
     height: 0px
+
+  // content
+  .content
+    margin-top: 50px
+    height: calc(100vh - 50px)
+    // weather
+    .weather
+      height: calc(100vh - 50px)
+      .weather-block
+        height: 33.5%
+        display: table
+        width: 100%
+        padding: 0 50px
+        h3
+          width: 50%
+          font-size: 2em
+        .circle
+          width: 50%
+          display: table-cell
+          vertical-align: middle
+          text-align: right
+          p
+            border: 6px solid $blue
+            padding: 35px 26px
+            border-radius: 50%
+            text-align: center
+            display: table-cell
+            vertical-align: middle
+            font-size: 1.5em
+            font-weight: 700
+    // familiar faces
+    .familiarfaces
+      width: 100vw
+      display: block
+      overflow: hidden
 
 
 

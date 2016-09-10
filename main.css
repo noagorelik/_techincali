@@ -112,244 +112,254 @@ body {
   animation: loaded linear 0.3s; }
 
 .main {
-  width: 100vw;
-  height: 100vh; }
+  width: 100vw; }
+
+.la, .sf, .sv {
+  background-size: cover; }
+
+.la {
+  background-image: url("images/la.jpg"); }
+
+.sf {
+  background-image: url("images/sf.jpg"); }
+
+.sv {
+  background-image: url("images/sv.jpg"); }
 
 @media screen and (min-width: 768px) {
   .mobileNav {
     display: none; }
 
-  .main .sidebar {
-    width: 30%;
-    height: 100vh;
-    background-color: #393939;
-    display: inline-block;
-    float: left; }
-    .main .sidebar .bar {
-      height: 18.75%;
-      width: 10px;
-      background-color: #00a651;
-      position: absolute;
-      left: 30%;
-      margin-left: -10px;
-      box-shadow: -5px 0 6px -3.5px rgba(31, 73, 125, 0.8); }
-    .main .sidebar .title {
-      height: 25%;
-      width: 100%;
-      display: table;
-      padding-left: 30px; }
-      .main .sidebar .title .small {
-        font-size: 0.8em; }
-    .main .sidebar .navBlock {
-      height: 18.8%;
-      width: 100%;
-      padding-left: 30px;
-      box-sizing: border-box;
-      display: table;
-      cursor: pointer; }
-    .main .sidebar .navBlock:hover h2 {
-      font-size: 1.5em; }
-  .main .content {
-    display: inline-block;
-    height: 100vh;
-    float: right;
-    width: 70%;
-    overflow-y: scroll; }
-    .main .content .weather {
-      background-color: #393939; }
-      .main .content .weather .la, .main .content .weather .sf, .main .content .weather .sv {
-        background-size: cover; }
-      .main .content .weather .la {
-        background-image: url("images/la.jpg"); }
-      .main .content .weather .sf {
-        background-image: url("images/sf.jpg"); }
-      .main .content .weather .sv {
-        background-image: url("images/sv.jpg"); }
-      .main .content .weather .weather-block {
-        height: 230px;
+  .main {
+    height: 100vh; }
+    .main .sidebar {
+      width: 30%;
+      height: 100vh;
+      background-color: #393939;
+      display: inline-block;
+      float: left; }
+      .main .sidebar .bar {
+        height: 18.75%;
+        width: 10px;
+        background-color: #00a651;
+        position: absolute;
+        left: 30%;
+        margin-left: -10px;
+        box-shadow: -5px 0 6px -3.5px rgba(31, 73, 125, 0.8); }
+      .main .sidebar .title {
+        height: 25%;
         width: 100%;
-        padding: 30px 50px;
+        display: table;
+        padding-left: 30px; }
+        .main .sidebar .title .small {
+          font-size: 0.8em; }
+      .main .sidebar .navBlock {
+        height: 18.8%;
+        width: 100%;
+        padding-left: 30px;
         box-sizing: border-box;
-        display: table; }
-        .main .content .weather .weather-block h3 {
+        display: table;
+        cursor: pointer; }
+      .main .sidebar .navBlock:hover h2 {
+        font-size: 1.5em; }
+    .main .content {
+      display: inline-block;
+      height: 100vh;
+      float: right;
+      width: 70%;
+      overflow-y: scroll; }
+      .main .content .weather {
+        background-color: #393939; }
+        .main .content .weather .weather-block {
+          height: 230px;
+          width: 100%;
+          padding: 30px 50px;
+          box-sizing: border-box;
+          display: table; }
+          .main .content .weather .weather-block h3 {
+            width: 60%;
+            font-size: 2.6em; }
+          .main .content .weather .weather-block .circle {
+            display: table-cell;
+            vertical-align: middle; }
+            .main .content .weather .weather-block .circle p {
+              border: 6px solid #1d7dba;
+              padding: 40px 26px;
+              border-radius: 50%;
+              text-align: center;
+              display: table-cell;
+              vertical-align: middle;
+              font-size: 2.5em;
+              font-weight: 700; }
+      .main .content .startups {
+        text-align: center; }
+        .main .content .startups .slide {
           width: 60%;
-          font-size: 2.6em; }
-        .main .content .weather .weather-block .circle {
-          display: table-cell;
-          vertical-align: middle; }
-          .main .content .weather .weather-block .circle p {
-            border: 6px solid #1d7dba;
-            padding: 40px 26px;
-            border-radius: 50%;
+          margin: 0 auto; }
+          .main .content .startups .slide .slide1, .main .content .startups .slide .slide2, .main .content .startups .slide .slide3, .main .content .startups .slide .slide4, .main .content .startups .slide .slide5, .main .content .startups .slide .slide6 {
+            width: 100%; }
+          .main .content .startups .slide .logo {
+            height: 50px;
+            margin: 70px auto 50px auto; }
+          .main .content .startups .slide .information {
+            color: #1d7dba;
             text-align: center;
+            line-height: 2.5em;
+            font-size: 1em; }
+            .main .content .startups .slide .information .source {
+              display: block;
+              margin-top: 25px; }
+        .main .content .startups .slideButtons {
+          text-align: center;
+          margin: 40px 0;
+          display: block;
+          position: absolute;
+          left: 32%;
+          top: 50%;
+          margin-top: -130px; }
+          .main .content .startups .slideButtons .btn {
+            height: 20px;
+            width: 20px;
+            background-color: #beb822;
+            display: block;
+            border-radius: 50%;
+            margin: 20px 0px;
+            opacity: 0.6;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            cursor: pointer; }
+          .main .content .startups .slideButtons .btn:hover {
+            opacity: 1; }
+          .main .content .startups .slideButtons .active {
+            opacity: 1;
+            text-shadow: 0px 0px 20px rgba(190, 184, 34, 0);
+            animation: growShrink linear 2s infinite; }
+      .main .content .familiarfaces {
+        width: 100%; }
+        .main .content .familiarfaces .faces {
+          display: inline-block;
+          padding: 50px 30px 0 30px;
+          width: 80%; }
+          .main .content .familiarfaces .faces .headshot {
+            width: 150px;
+            display: block;
+            margin: 0 auto; }
+            .main .content .familiarfaces .faces .headshot .face {
+              width: 100%;
+              border-radius: 50%; }
+          .main .content .familiarfaces .faces .face_information {
+            margin: 30px auto 0 auto;
+            text-align: center;
+            width: 80%; }
+            .main .content .familiarfaces .faces .face_information h3 {
+              font-weight: 700;
+              font-size: 1.4em;
+              display: block;
+              margin: 0; }
+            .main .content .familiarfaces .faces .face_information .top {
+              overflow: hidden;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px; }
+              .main .content .familiarfaces .faces .face_information .top .age {
+                border-top-left-radius: 5px;
+                width: 40%;
+                padding: 20px;
+                float: left;
+                margin-top: 20px; }
+              .main .content .familiarfaces .faces .face_information .top .networth {
+                border-top-right-radius: 5px;
+                width: 60%;
+                float: right;
+                padding: 20px; }
+            .main .content .familiarfaces .faces .face_information .info {
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+              padding: 30px;
+              clear: both;
+              max-height: 300px;
+              overflow: scroll; }
+              .main .content .familiarfaces .faces .face_information .info p {
+                font-size: 0.9em;
+                line-height: 1.9em;
+                font-weight: 500; }
+        .main .content .familiarfaces .arrow-left, .main .content .familiarfaces .arrow-right {
+          display: block;
+          height: 100vh;
+          width: 10%;
+          display: table;
+          padding: 0 20px; }
+          .main .content .familiarfaces .arrow-left .fa, .main .content .familiarfaces .arrow-right .fa {
+            font-size: 3em;
             display: table-cell;
             vertical-align: middle;
-            font-size: 2.5em;
-            font-weight: 700; }
-    .main .content .startups {
-      text-align: center; }
-      .main .content .startups .slide {
-        width: 60%;
-        margin: 0 auto; }
-        .main .content .startups .slide .slide1, .main .content .startups .slide .slide2, .main .content .startups .slide .slide3, .main .content .startups .slide .slide4, .main .content .startups .slide .slide5, .main .content .startups .slide .slide6 {
-          width: 100%; }
-        .main .content .startups .slide .logo {
-          height: 50px;
-          margin: 70px auto 50px auto; }
-        .main .content .startups .slide .information {
-          color: #1d7dba;
-          text-align: center;
-          line-height: 2.5em;
-          font-size: 1em; }
-          .main .content .startups .slide .information .source {
-            display: block;
-            margin-top: 25px; }
-      .main .content .startups .slideButtons {
-        text-align: center;
-        margin: 40px 0;
-        display: block;
-        position: absolute;
-        left: 32%;
-        top: 50%;
-        margin-top: -130px; }
-        .main .content .startups .slideButtons .btn {
-          height: 20px;
-          width: 20px;
-          background-color: #beb822;
-          display: block;
-          border-radius: 50%;
-          margin: 20px 0px;
-          opacity: 0.6;
-          -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-          cursor: pointer; }
-        .main .content .startups .slideButtons .btn:hover {
-          opacity: 1; }
-        .main .content .startups .slideButtons .active {
-          opacity: 1;
-          text-shadow: 0px 0px 20px rgba(190, 184, 34, 0);
-          animation: growShrink linear 2s infinite; }
-    .main .content .familiarfaces {
-      width: 100%; }
-      .main .content .familiarfaces .faces {
-        display: inline-block;
-        padding: 50px 30px 0 30px;
-        width: 80%; }
-        .main .content .familiarfaces .faces .headshot {
-          width: 150px;
-          display: block;
-          margin: 0 auto; }
-          .main .content .familiarfaces .faces .headshot .face {
-            width: 100%;
-            border-radius: 50%; }
-        .main .content .familiarfaces .faces .face_information {
-          margin: 30px auto 0 auto;
-          text-align: center;
-          width: 80%; }
-          .main .content .familiarfaces .faces .face_information h3 {
-            font-weight: 700;
-            font-size: 1.4em;
-            display: block;
-            margin: 0; }
-          .main .content .familiarfaces .faces .face_information .top {
-            overflow: hidden;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px; }
-            .main .content .familiarfaces .faces .face_information .top .age {
-              border-top-left-radius: 5px;
-              width: 40%;
-              padding: 20px;
-              float: left;
-              margin-top: 20px; }
-            .main .content .familiarfaces .faces .face_information .top .networth {
-              border-top-right-radius: 5px;
-              width: 60%;
-              float: right;
-              padding: 20px; }
-          .main .content .familiarfaces .faces .face_information .info {
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding: 30px;
-            clear: both;
-            max-height: 300px;
-            overflow: scroll; }
-            .main .content .familiarfaces .faces .face_information .info p {
-              font-size: 0.9em;
-              line-height: 1.9em;
-              font-weight: 500; }
-      .main .content .familiarfaces .arrow-left, .main .content .familiarfaces .arrow-right {
-        display: block;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out; }
+          .main .content .familiarfaces .arrow-left .fa:hover, .main .content .familiarfaces .arrow-right .fa:hover {
+            font-size: 4em; }
+        .main .content .familiarfaces .arrow-left {
+          float: left; }
+        .main .content .familiarfaces .arrow-right {
+          float: right; }
+      .main .content .funfacts {
         height: 100vh;
-        width: 10%;
-        display: table;
-        padding: 0 20px; }
-        .main .content .familiarfaces .arrow-left .fa, .main .content .familiarfaces .arrow-right .fa {
-          font-size: 3em;
+        width: 100%;
+        display: table; }
+        .main .content .funfacts h4 {
+          position: absolute;
+          text-align: center; }
+        .main .content .funfacts .f_num {
+          display: block;
+          font-size: 2em; }
+        .main .content .funfacts .factBtn:hover {
+          cursor: pointer; }
+          .main .content .funfacts .factBtn:hover img {
+            animation: rotate linear 5s infinite; }
+        .main .content .funfacts .factBtn {
+          position: absolute; }
+          .main .content .funfacts .factBtn img {
+            height: 200px; }
+        .main .content .funfacts .fact1 {
+          left: 30%;
+          top: 0; }
+          .main .content .funfacts .fact1 h4 {
+            top: 25%;
+            left: 35%; }
+        .main .content .funfacts .fact2 {
+          right: 0;
+          top: 0; }
+          .main .content .funfacts .fact2 h4 {
+            top: 25%;
+            right: 33%; }
+        .main .content .funfacts .fact3 {
+          left: 30%;
+          bottom: 0; }
+          .main .content .funfacts .fact3 h4 {
+            bottom: 25%;
+            left: 35%; }
+        .main .content .funfacts .fact4 {
+          right: 0;
+          bottom: 0; }
+          .main .content .funfacts .fact4 h4 {
+            bottom: 25%;
+            right: 33%; }
+        .main .content .funfacts p {
+          font-size: 1.5em;
           display: table-cell;
           vertical-align: middle;
-          cursor: pointer;
-          -webkit-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out; }
-        .main .content .familiarfaces .arrow-left .fa:hover, .main .content .familiarfaces .arrow-right .fa:hover {
-          font-size: 4em; }
-      .main .content .familiarfaces .arrow-left {
-        float: left; }
-      .main .content .familiarfaces .arrow-right {
-        float: right; }
-    .main .content .funfacts {
-      height: 100vh;
-      width: 100%;
-      display: table; }
-      .main .content .funfacts h4 {
-        position: absolute;
-        text-align: center; }
-      .main .content .funfacts .f_num {
-        display: block;
-        font-size: 2em; }
-      .main .content .funfacts .factBtn:hover {
-        cursor: pointer; }
-        .main .content .funfacts .factBtn:hover img {
-          animation: rotate linear 5s infinite; }
-      .main .content .funfacts .factBtn {
-        position: absolute; }
-        .main .content .funfacts .factBtn img {
-          height: 200px; }
-      .main .content .funfacts .fact1 {
-        left: 30%;
-        top: 0; }
-        .main .content .funfacts .fact1 h4 {
-          top: 25%;
-          left: 35%; }
-      .main .content .funfacts .fact2 {
-        right: 0;
-        top: 0; }
-        .main .content .funfacts .fact2 h4 {
-          top: 25%;
-          right: 33%; }
-      .main .content .funfacts .fact3 {
-        left: 30%;
-        bottom: 0; }
-        .main .content .funfacts .fact3 h4 {
-          bottom: 25%;
-          left: 35%; }
-      .main .content .funfacts .fact4 {
-        right: 0;
-        bottom: 0; }
-        .main .content .funfacts .fact4 h4 {
-          bottom: 25%;
-          right: 33%; }
-      .main .content .funfacts p {
-        font-size: 1.5em;
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-        padding: 100px; } }
+          text-align: center;
+          padding: 100px; } }
 @media screen and (max-width: 768px) {
   .sidebar {
     display: none; }
 
   .mobileNav {
-    display: block; }
+    display: block;
+    background-color: #393939;
+    height: 50px;
+    width: 100vw;
+    position: absolute;
+    top: 0; }
 
   .navBar {
     display: block;
@@ -370,7 +380,8 @@ body {
       float: right;
       height: 30px;
       display: table;
-      margin: 10px 30px; }
+      margin: 10px 30px;
+      cursor: pointer; }
       .navBar .nav i {
         color: #1d7dba;
         display: table-cell;
@@ -389,15 +400,49 @@ body {
     padding-left: 30px;
     transition: all 0.3s ease-out;
     overflow: hidden; }
-    .navList li h2 {
-      font-size: 1em;
-      padding: 10px 0; }
+    .navList li {
+      cursor: pointer; }
+      .navList li h2 {
+        font-size: 1em;
+        padding: 10px 0; }
 
   .expand {
     height: 168px; }
 
   .contract {
-    height: 0px; } }
+    height: 0px; }
+
+  .content {
+    margin-top: 50px;
+    height: calc(100vh - 50px); }
+    .content .weather {
+      height: calc(100vh - 50px); }
+      .content .weather .weather-block {
+        height: 33.5%;
+        display: table;
+        width: 100%;
+        padding: 0 50px; }
+        .content .weather .weather-block h3 {
+          width: 50%;
+          font-size: 2em; }
+        .content .weather .weather-block .circle {
+          width: 50%;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: right; }
+          .content .weather .weather-block .circle p {
+            border: 6px solid #1d7dba;
+            padding: 35px 26px;
+            border-radius: 50%;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 1.5em;
+            font-weight: 700; }
+    .content .familiarfaces {
+      width: 100vw;
+      display: block;
+      overflow: hidden; } }
 @keyframes loaded {
   0% {
     opacity: 1; }
