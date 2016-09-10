@@ -306,7 +306,6 @@ body
                 line-height: 1.9em
                 font-weight: 500
 
-
         .arrow-left, .arrow-right
           display: block
           height: 100vh
@@ -388,6 +387,7 @@ body
     width: 100vw
     position: absolute
     top: 0
+    z-index: 1001
   .navBar
     display: block
     background-color: $gray
@@ -444,11 +444,13 @@ body
     // weather
     .weather
       height: calc(100vh - 50px)
+      width: 100%
+      overflow: hidden
       .weather-block
         height: 33.5%
         display: table
         width: 100%
-        padding: 0 50px
+        padding: 0 20px
         h3
           width: 50%
           font-size: 2em
@@ -457,6 +459,7 @@ body
           display: table-cell
           vertical-align: middle
           text-align: right
+          padding: 20px
           p
             border: 6px solid $blue
             padding: 35px 26px
@@ -466,7 +469,6 @@ body
             vertical-align: middle
             font-size: 1.5em
             font-weight: 700
-
 
     // the startups
     .startups
@@ -485,6 +487,9 @@ body
         .source
           display: block
           margin-top: 10px
+      .slide4
+        .logo
+          height: 30px
       .slideButtons
         text-align: center
         margin: 40px 0
@@ -528,9 +533,9 @@ body
             width: 100%
             border-radius: 50%
         .face_information
-          margin: 30px auto 0 auto
+          margin: 30px auto 30px auto
           text-align: center
-          width: 80%
+          width: 100%
           h3
             font-weight: 700
             font-size: 1em
@@ -572,7 +577,8 @@ body
         .fa
           font-size: 2em
           display: table-cell
-          vertical-align: middle
+          vertical-align: top
+          padding-top: 100px
           cursor: pointer
           -webkit-transition: all 0.3s ease-out
           transition: all 0.3s ease-out
@@ -583,7 +589,7 @@ body
 
     // fun facts
     .funfacts
-      height: 100vh
+      height: calc(100vh - 100px)
       width: 100%
       display: table
       h4
@@ -626,11 +632,11 @@ body
           bottom: 20%
           right: 25%
       p
-        font-size: 1.2em
+        font-size: 0.9em
         display: table-cell
         vertical-align: middle
         text-align: center
-        height: 50%
+        margin-top: -20px
         padding: 0 30px
 
 

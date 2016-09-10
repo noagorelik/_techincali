@@ -359,7 +359,8 @@ body {
     height: 50px;
     width: 100vw;
     position: absolute;
-    top: 0; }
+    top: 0;
+    z-index: 1001; }
 
   .navBar {
     display: block;
@@ -416,12 +417,14 @@ body {
     margin-top: 50px;
     height: calc(100vh - 50px); }
     .content .weather {
-      height: calc(100vh - 50px); }
+      height: calc(100vh - 50px);
+      width: 100%;
+      overflow: hidden; }
       .content .weather .weather-block {
         height: 33.5%;
         display: table;
         width: 100%;
-        padding: 0 50px; }
+        padding: 0 20px; }
         .content .weather .weather-block h3 {
           width: 50%;
           font-size: 2em; }
@@ -429,7 +432,8 @@ body {
           width: 50%;
           display: table-cell;
           vertical-align: middle;
-          text-align: right; }
+          text-align: right;
+          padding: 20px; }
           .content .weather .weather-block .circle p {
             border: 6px solid #1d7dba;
             padding: 35px 26px;
@@ -454,6 +458,8 @@ body {
       .content .startups .slide .source {
         display: block;
         margin-top: 10px; }
+    .content .startups .slide4 .logo {
+      height: 30px; }
     .content .startups .slideButtons {
       text-align: center;
       margin: 40px 0;
@@ -495,9 +501,9 @@ body {
             width: 100%;
             border-radius: 50%; }
         .content .familiarfaces .faces .face_information {
-          margin: 30px auto 0 auto;
+          margin: 30px auto 30px auto;
           text-align: center;
-          width: 80%; }
+          width: 100%; }
           .content .familiarfaces .faces .face_information h3 {
             font-weight: 700;
             font-size: 1em;
@@ -537,7 +543,8 @@ body {
         .content .familiarfaces .arrow-left .fa, .content .familiarfaces .arrow-right .fa {
           font-size: 2em;
           display: table-cell;
-          vertical-align: middle;
+          vertical-align: top;
+          padding-top: 100px;
           cursor: pointer;
           -webkit-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out; }
@@ -546,7 +553,7 @@ body {
       .content .familiarfaces .arrow-right {
         float: right; }
     .content .funfacts {
-      height: 100vh;
+      height: calc(100vh - 100px);
       width: 100%;
       display: table; }
       .content .funfacts h4 {
@@ -589,11 +596,11 @@ body {
           bottom: 20%;
           right: 25%; }
       .content .funfacts p {
-        font-size: 1.2em;
+        font-size: 0.9em;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
-        height: 50%;
+        margin-top: -20px;
         padding: 0 30px; } }
 @keyframes loaded {
   0% {
