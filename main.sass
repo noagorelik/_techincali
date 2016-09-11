@@ -46,6 +46,44 @@ body
     display: table-cell
     vertical-align: middle
 
+.pulse
+  animation: pulse linear 2s infinite
+
+.hidden
+  opacity: 0!important
+.show
+  opacity: 1!important
+.none
+  display: none!important
+.block
+  display: block!important
+.inline-block
+  display: inline-block!important
+
+.comeUp
+  animation: comeUp linear 0.5s
+.comeRight
+  animation: comeRight linear 0.5s
+.comeLeft
+  animation: comeLeft linear 0.5s
+
+.loaded .start
+  animation: loaded linear 0.3s
+
+.main
+  width: 100vw
+
+.la, .sf, .sv
+  background-size: cover
+.la
+  background-image: url('images/la.jpg')
+.sf
+  background-image: url('images/sf.jpg')
+.sv
+  background-image: url('images/sv.jpg')
+
+// large screen
+@media screen and (min-width: $break-screen)
   .start
     height: 100%
     width: 100%
@@ -98,45 +136,6 @@ body
       margin-left: -18.5em
       background-color: $cream
       animation: hider linear 5s infinite
-
-.pulse
-  animation: pulse linear 2s infinite
-
-.hidden
-  opacity: 0!important
-.show
-  opacity: 1!important
-.none
-  display: none!important
-.block
-  display: block!important
-.inline-block
-  display: inline-block!important
-
-.comeUp
-  animation: comeUp linear 0.5s
-.comeRight
-  animation: comeRight linear 0.5s
-.comeLeft
-  animation: comeLeft linear 0.5s
-
-.loaded .start
-  animation: loaded linear 0.3s
-
-.main
-  width: 100vw
-
-.la, .sf, .sv
-  background-size: cover
-.la
-  background-image: url('images/la.jpg')
-.sf
-  background-image: url('images/sf.jpg')
-.sv
-  background-image: url('images/sv.jpg')
-
-// large screen
-@media screen and (min-width: $break-screen)
   .mobileNav
     display: none
   .main
@@ -378,6 +377,57 @@ body
 
 // small screen (mobile)
 @media screen and (max-width: $break-screen)
+  .start
+    height: 100%
+    width: 100%
+    position: fixed
+    z-index: 1002
+    background-color: $cream
+    text-align: center
+    color: $gray
+    top: 0
+
+    .background-loader
+      position: fixed
+      width: 70%
+      height: 40px
+      background-color: $blue
+      border-radius: 5px
+      top: 20%
+      left: 15%
+
+      .moving-loader
+        width: 0%
+        background-color: $yellow
+        height: 100%
+        border-radius: 5px
+        animation: progress linear 15s 2s
+    p
+      position: fixed
+      top: 35%
+      left: 15%
+      font-size: 1em
+      overflow: hidden
+    .p1
+      opacity: 1
+    .p2
+      opacity: 0
+    .p3
+      opacity: 0
+    .p4
+      opacity: 0
+
+    .hider
+      position: fixed
+      top: 35%
+      left: 50%
+      width: 30em
+      height: 4em
+      margin-top: -1.5em
+      margin-left: -18.5em
+      background-color: $cream
+      animation: hider linear 5s infinite
+
   .sidebar
     display: none
   .mobileNav
